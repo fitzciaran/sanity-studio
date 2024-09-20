@@ -892,6 +892,12 @@ export default defineType({
       group: 'connectivity',
     }),
     defineField({
+      name: 'combinedTechDimensionsmm',
+      title: 'Combined Tech Dimensions mm',
+      type: 'string',
+      group: 'technicalDrawings',
+    }),
+    defineField({
       name: 'top',
       title: 'Top',
       type: 'image',
@@ -975,6 +981,90 @@ export default defineType({
     defineField({
       name: 'side3',
       title: 'Side3',
+      type: 'image',
+      group: 'technicalDrawings',
+      options: {
+        hotspot: true,
+      },
+    }),
+
+    defineField({
+      name: 'back4',
+      title: 'Back4',
+      type: 'image',
+      group: 'technicalDrawings',
+      options: {
+        hotspot: true,
+      },
+    }),
+    defineField({
+      name: 'front4',
+      title: 'Front4',
+      type: 'image',
+      group: 'technicalDrawings',
+      options: {
+        hotspot: true,
+      },
+    }),
+    defineField({
+      name: 'side4',
+      title: 'Side4',
+      type: 'image',
+      group: 'technicalDrawings',
+      options: {
+        hotspot: true,
+      },
+    }),
+
+    defineField({
+      name: 'back5',
+      title: 'Back5',
+      type: 'image',
+      group: 'technicalDrawings',
+      options: {
+        hotspot: true,
+      },
+    }),
+    defineField({
+      name: 'front5',
+      title: 'Front5',
+      type: 'image',
+      group: 'technicalDrawings',
+      options: {
+        hotspot: true,
+      },
+    }),
+    defineField({
+      name: 'side5',
+      title: 'Side5',
+      type: 'image',
+      group: 'technicalDrawings',
+      options: {
+        hotspot: true,
+      },
+    }),
+
+    defineField({
+      name: 'back6',
+      title: 'Back6',
+      type: 'image',
+      group: 'technicalDrawings',
+      options: {
+        hotspot: true,
+      },
+    }),
+    defineField({
+      name: 'front6',
+      title: 'Front6',
+      type: 'image',
+      group: 'technicalDrawings',
+      options: {
+        hotspot: true,
+      },
+    }),
+    defineField({
+      name: 'side6',
+      title: 'Side6',
       type: 'image',
       group: 'technicalDrawings',
       options: {
