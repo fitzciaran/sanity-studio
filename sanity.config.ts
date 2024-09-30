@@ -22,7 +22,7 @@ export default defineConfig({
         {id: 'fr', title: 'French'},
       ],
       defaultLanguages: ['en'],
-      fieldTypes: ['product', 'string'],
+      fieldTypes: ['product', 'software', 'accessory', 'string'],
     }),
   ],
 

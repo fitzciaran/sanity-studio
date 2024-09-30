@@ -78,6 +78,14 @@ export default defineType({
       name: 'technicalDrawings',
       title: 'TECHNICAL DRAWINGS',
     },
+    {
+      name: 'accessories',
+      title: 'Accessories',
+    },
+    {
+      name: 'webcam',
+      title: 'Webcam',
+    },
   ],
   icon,
   fields: [
@@ -158,6 +166,61 @@ export default defineType({
       group: 'display',
     }),
     defineField({
+      name: 'penAndTouchCapability',
+      title: 'Pen and Touch Capability',
+      type: 'internationalizedArrayString',
+      group: 'generalSpecifications',
+    }),
+    defineField({
+      name: 'multiUserMultiTouchInput',
+      title: 'Multi-user and Multi-touch Input',
+      type: 'internationalizedArrayString',
+      group: 'generalSpecifications',
+    }),
+    defineField({
+      name: 'crossPlatformCompatibility',
+      title: 'Cross-Platform Compatibility',
+      type: 'internationalizedArrayString',
+      group: 'generalSpecifications',
+    }),
+    defineField({
+      name: 'intuitiveInterface',
+      title: 'Intuitive Interface',
+      type: 'internationalizedArrayString',
+      group: 'generalSpecifications',
+    }),
+    defineField({
+      name: 'easyQuickLessonCreation',
+      title: 'Easy, Quick Lesson Creation',
+      type: 'internationalizedArrayString',
+      group: 'generalSpecifications',
+    }),
+    defineField({
+      name: 'learnerResponseIntegration',
+      title: 'Learner Response Integration',
+      type: 'internationalizedArrayString',
+      group: 'generalSpecifications',
+    }),
+    defineField({
+      name: 'learnerResponseSystemFeatures',
+      title: 'Learner Response System Features',
+      type: 'internationalizedArrayString',
+      group: 'generalSpecifications',
+    }),
+    defineField({
+      name: 'resources',
+      title: 'Resources',
+      type: 'internationalizedArrayString',
+      group: 'generalSpecifications',
+    }),
+    defineField({
+      name: 'languages',
+      title: 'Languages',
+      type: 'internationalizedArrayString',
+      group: 'generalSpecifications',
+    }),
+
+    defineField({
       name: 'deviceType',
       title: 'Device Type',
       type: 'internationalizedArrayString',
@@ -166,6 +229,38 @@ export default defineType({
     defineField({
       name: 'operatingSystem',
       title: 'Operating System',
+      type: 'internationalizedArrayString',
+      group: 'generalSpecifications',
+    }),
+    defineField({
+      name: 'pcMinSpecs',
+      title: 'PC Minimum',
+      type: 'internationalizedArrayString',
+      group: 'generalSpecifications',
+    }),
+    defineField({
+      name: 'linuxMinSpecs',
+      title: 'Linux Minimum',
+      type: 'internationalizedArrayString',
+      group: 'generalSpecifications',
+    }),
+
+    defineField({
+      name: 'macMinSpecs',
+      title: 'MAC Minimum',
+      type: 'internationalizedArrayString',
+      group: 'generalSpecifications',
+    }),
+    defineField({
+      name: 'professionalEdition',
+      title: 'Professional Edition',
+      type: 'internationalizedArrayString',
+      group: 'generalSpecifications',
+    }),
+
+    defineField({
+      name: 'personalEdition',
+      title: 'Personal Edition',
       type: 'internationalizedArrayString',
       group: 'generalSpecifications',
     }),
@@ -476,6 +571,12 @@ export default defineType({
       group: 'display',
     }),
     defineField({
+      name: 'diagonalSize',
+      title: 'Diagonal Size',
+      type: 'internationalizedArrayString',
+      group: 'display',
+    }),
+    defineField({
       name: 'blueLightReduction',
       title: 'Blue Light Reduction',
       type: 'boolean',
@@ -491,6 +592,12 @@ export default defineType({
       name: 'aspectRatio',
       title: 'Aspect Ratio',
       type: 'string',
+      group: 'display',
+    }),
+    defineField({
+      name: 'dryEraseSurface',
+      title: 'Dry Erase Surface',
+      type: 'boolean',
       group: 'display',
     }),
     defineField({
@@ -578,6 +685,20 @@ export default defineType({
       group: 'interactivity',
     }),
     defineField({
+      name: 'touchTechnology',
+      title: 'Touch Technology',
+      type: 'array',
+      of: [{type: 'string'}],
+      options: {
+        list: [
+          {title: 'None', value: 'none'},
+          {title: 'Infrared', value: 'infrared'},
+        ],
+        layout: 'tags',
+      },
+      group: 'interactivity',
+    }),
+    defineField({
       name: 'continuousTouchPoints',
       title: 'Continuous Touch Points',
       type: 'number',
@@ -590,6 +711,18 @@ export default defineType({
       group: 'interactivity',
     }),
     defineField({
+      name: 'objectSizeResolution',
+      title: 'Object Size Resolution',
+      type: 'number',
+      group: 'interactivity',
+    }),
+    defineField({
+      name: 'touchRefreshRate',
+      title: 'Touch Refresh Rate',
+      type: 'number',
+      group: 'interactivity',
+    }),
+    defineField({
       name: 'responseTime',
       title: 'Response Time (ms)',
       type: 'number',
@@ -599,6 +732,12 @@ export default defineType({
       name: 'touchAccuracy',
       title: 'Touch Accuracy (mm)',
       type: 'number',
+      group: 'interactivity',
+    }),
+    defineField({
+      name: 'userInput',
+      title: 'User Input',
+      type: 'internationalizedArrayString',
       group: 'interactivity',
     }),
     defineField({
@@ -684,6 +823,12 @@ export default defineType({
       name: 'dualFrontFacingSpeakers',
       title: 'Dual Front-facing Speakers (W)',
       type: 'string',
+      group: 'audio',
+    }),
+    defineField({
+      name: 'isPeak',
+      title: 'Peak?',
+      type: 'boolean',
       group: 'audio',
     }),
     defineField({
@@ -1070,6 +1215,24 @@ export default defineType({
       options: {
         hotspot: true,
       },
+    }),
+    defineField({
+      name: 'standsProjectors',
+      title: 'Stands & Projectors',
+      type: 'boolean',
+      group: 'accessories',
+    }),
+    defineField({
+      name: 'activSoundBar',
+      title: 'ActivSoundBar',
+      type: 'boolean',
+      group: 'accessories',
+    }),
+    defineField({
+      name: 'sensor',
+      title: 'Sensor',
+      type: 'boolean',
+      group: 'webcam',
     }),
   ],
   preview: {
