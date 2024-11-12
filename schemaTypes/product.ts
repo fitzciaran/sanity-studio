@@ -571,6 +571,12 @@ export default defineType({
       group: 'display',
     }),
     defineField({
+      name: 'backlightTech',
+      title: 'Backlight Technology',
+      type: 'internationalizedArrayString',
+      group: 'display',
+    }),
+    defineField({
       name: 'diagonalSize',
       title: 'Diagonal Size',
       type: 'internationalizedArrayString',
@@ -649,6 +655,12 @@ export default defineType({
       group: 'display',
     }),
     defineField({
+      name: 'typicalMaxBrightness',
+      title: 'Typical Max. Brightness',
+      type: 'internationalizedArrayString',
+      group: 'display',
+    }),
+    defineField({
       name: 'brightness',
       title: 'Brightness (cd/m²)',
       type: 'number',
@@ -679,6 +691,12 @@ export default defineType({
       group: 'display',
     }),
     defineField({
+      name: 'glassCoating',
+      title: 'Glass Coating',
+      type: 'internationalizedArrayString',
+      group: 'display',
+    }),
+    defineField({
       name: 'vellumTouchTechnology',
       title: 'Vellum Touch Technology',
       type: 'boolean',
@@ -705,6 +723,12 @@ export default defineType({
       group: 'interactivity',
     }),
     defineField({
+      name: 'surfaceAreaResolution',
+      title: 'Surface Area Resolution',
+      type: 'number',
+      group: 'interactivity',
+    }),
+    defineField({
       name: 'touchResolution',
       title: 'Touch Resolution (px)',
       type: 'string',
@@ -712,13 +736,19 @@ export default defineType({
     }),
     defineField({
       name: 'objectSizeResolution',
-      title: 'Object Size Resolution',
+      title: 'Object Size Resolution (mm diameter)',
       type: 'number',
       group: 'interactivity',
     }),
     defineField({
       name: 'touchRefreshRate',
       title: 'Touch Refresh Rate',
+      type: 'number',
+      group: 'interactivity',
+    }),
+    defineField({
+      name: 'multiTouch',
+      title: 'Multi Touch',
       type: 'number',
       group: 'interactivity',
     }),
@@ -783,10 +813,22 @@ export default defineType({
       group: 'interactivity',
     }),
     defineField({
+      name: 'writingHandPalmRejection',
+      title: 'Writing-hand Palm Rejection',
+      type: 'boolean',
+      group: 'interactivity',
+    }),
+    defineField({
       name: 'pensIncluded',
       title: 'Pens Included',
       //note: render this as e.g. Yes,2
       type: 'number',
+      group: 'interactivity',
+    }),
+    defineField({
+      name: 'pensIncludedString',
+      title: 'Pens Included',
+      type: 'internationalizedArrayString',
       group: 'interactivity',
     }),
     defineField({
@@ -1219,13 +1261,13 @@ export default defineType({
     defineField({
       name: 'standsProjectors',
       title: 'Stands & Projectors',
-      type: 'boolean',
+      type: 'internationalizedArrayString',
       group: 'accessories',
     }),
     defineField({
       name: 'activSoundBar',
       title: 'ActivSoundBar',
-      type: 'boolean',
+      type: 'internationalizedArrayString',
       group: 'accessories',
     }),
     defineField({
