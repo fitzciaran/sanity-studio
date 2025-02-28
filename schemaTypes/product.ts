@@ -319,6 +319,36 @@ export default defineType({
       group: 'generalSpecifications',
     }),
     defineField({
+      name: 'totalSpeakerPower',
+      title: 'Total Speaker Power',
+      type: 'string', // Kept as string to handle "2 x 20 W RMS"
+      group: 'generalSpecifications',
+    }),
+    defineField({
+      name: 'speakerSizes',
+      title: 'Speaker Sizes',
+      type: 'string', // Using string for "4 x 2.25”"
+      group: 'generalSpecifications',
+    }),
+    defineField({
+      name: 'frequencyResponse',
+      title: 'Frequency Response',
+      type: 'string', // Using string for range "65 Hz - 20 KHz"
+      group: 'generalSpecifications',
+    }),
+    defineField({
+      name: 'signalToNoiseRatio',
+      title: 'Signal to Noise',
+      type: 'string', // Kept as string to include "≥ 75 dB"
+      group: 'generalSpecifications',
+    }),
+    defineField({
+      name: 'compatiblePrometheanDevices',
+      title: 'Compatible Promethean Devices',
+      type: 'string',
+      group: 'generalSpecifications',
+    }),
+    defineField({
       name: 'hdmiInDetails',
       title: 'HDMI In',
       type: 'internationalizedArrayString',
@@ -364,6 +394,31 @@ export default defineType({
       name: 'networkConnectivity',
       title: 'Network Connectivity',
       type: 'internationalizedArrayString',
+      group: 'connectivity',
+    }),
+    // New connectivity fields for Aux In, S/PDIF, Bluetooth, and USB-A
+    defineField({
+      name: 'auxIn',
+      title: 'Aux In',
+      type: 'number', // using number so that "x1" is stored as 1
+      group: 'connectivity',
+    }),
+    defineField({
+      name: 'spdif',
+      title: 'S/PDIF',
+      type: 'number', // using number for "x1"
+      group: 'connectivity',
+    }),
+    defineField({
+      name: 'bluetoothConnectivity',
+      title: 'Bluetooth',
+      type: 'boolean', // using boolean; "Yes" becomes true, "No" false
+      group: 'connectivity',
+    }),
+    defineField({
+      name: 'usbA',
+      title: 'USB-A',
+      type: 'number', // using number for "x1"
       group: 'connectivity',
     }),
     defineField({
@@ -847,6 +902,24 @@ export default defineType({
       name: 'penTipDiameter',
       title: 'Pen Tip Diameter (mm)',
       type: 'number',
+      group: 'interactivity',
+    }),
+    defineField({
+      name: 'penEraserDiameter',
+      title: 'Pen Eraser Diameter (mm)',
+      type: 'number',
+      group: 'interactivity',
+    }),
+    defineField({
+      name: 'integratedActivePenCharging',
+      title: 'Integrated Active Pen Charging',
+      type: 'boolean',
+      group: 'interactivity',
+    }),
+    defineField({
+      name: 'touchEnabledPiP',
+      title: 'Touch-enabled PiP',
+      type: 'boolean',
       group: 'interactivity',
     }),
     defineField({
