@@ -440,6 +440,12 @@ export default defineType({
       group: 'power',
     }),
     defineField({
+      name: 'automaticStandbyDelay',
+      title: 'Automatic Standby Delay',
+      type: 'number',
+      group: 'power',
+    }),
+    defineField({
       name: 'ultraQuietFanlessDesign',
       title: 'Ultra-Quiet Fanless Design',
       type: 'boolean',

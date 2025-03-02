@@ -20,6 +20,8 @@ export default defineConfig({
       languages: [
         {id: 'en', title: 'English'},
         {id: 'fr', title: 'French'},
+        {id: 'de', title: 'German'},
+        {id: 'es', title: 'Spanish'},
       ],
       defaultLanguages: ['en'],
       fieldTypes: ['product', 'software', 'accessory', 'string'],
