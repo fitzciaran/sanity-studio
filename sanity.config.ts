@@ -19,9 +19,9 @@ export default defineConfig({
     internationalizedArray({
       languages: [
         {id: 'en', title: 'English'},
-        {id: 'fr', title: 'French'},
-        {id: 'de', title: 'German'},
-        {id: 'es', title: 'Spanish'},
+        {id: 'FR-FR', title: 'French'},
+        {id: 'DE-DE', title: 'German'},
+        {id: 'ES-ES', title: 'Spanish'},
       ],
       defaultLanguages: ['en'],
       fieldTypes: ['product', 'software', 'accessory', 'string'],

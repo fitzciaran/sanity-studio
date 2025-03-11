@@ -117,11 +117,11 @@ export default defineType({
         maxLength: 100,
       },
     }),
-    defineField({
-      name: 'overview',
-      title: 'Overview',
-      type: 'blockContent',
-    }),
+    // defineField({
+    //   name: 'overview',
+    //   title: 'Overview',
+    //   type: 'blockContent',
+    // }),
     defineField({
       name: 'releaseDate',
       title: 'Release date',
@@ -130,6 +130,15 @@ export default defineType({
     defineField({
       name: 'featuredImage',
       title: 'Featured Image',
+      type: 'image',
+      group: 'main',
+      options: {
+        hotspot: true,
+      },
+    }),
+    defineField({
+      name: 'titleImage',
+      title: 'Title Image',
       type: 'image',
       group: 'main',
       options: {
@@ -257,7 +266,19 @@ export default defineType({
       type: 'internationalizedArrayString',
       group: 'generalSpecifications',
     }),
+    defineField({
+      name: 'activInspireProfessionalSingleUser',
+      title: 'ActivInspire® Professional Single User',
+      type: 'boolean',
+      group: 'generalSpecifications',
+    }),
 
+    defineField({
+      name: 'prometheanActivSuiteLicence',
+      title: 'Promethean ActivSuite',
+      type: 'internationalizedArrayString',
+      group: 'generalSpecifications',
+    }),
     defineField({
       name: 'personalEdition',
       title: 'Personal Edition',
@@ -361,6 +382,12 @@ export default defineType({
       group: 'connectivity',
     }),
     defineField({
+      name: 'hdmiOutString',
+      title: 'HDMI Out',
+      type: 'string',
+      group: 'connectivity',
+    }),
+    defineField({
       name: 'usbType',
       title: 'USB Type',
       type: 'internationalizedArrayString',
@@ -396,35 +423,47 @@ export default defineType({
       type: 'internationalizedArrayString',
       group: 'connectivity',
     }),
-    // New connectivity fields for Aux In, S/PDIF, Bluetooth, and USB-A
+
     defineField({
       name: 'auxIn',
       title: 'Aux In',
-      type: 'number', // using number so that "x1" is stored as 1
+      type: 'number',
       group: 'connectivity',
     }),
     defineField({
       name: 'spdif',
       title: 'S/PDIF',
-      type: 'number', // using number for "x1"
+      type: 'number',
+      group: 'connectivity',
+    }),
+    defineField({
+      name: 'spdifString',
+      title: 'S/PDIF',
+      type: 'string',
       group: 'connectivity',
     }),
     defineField({
       name: 'bluetoothConnectivity',
       title: 'Bluetooth',
-      type: 'boolean', // using boolean; "Yes" becomes true, "No" false
+      type: 'boolean',
       group: 'connectivity',
     }),
     defineField({
       name: 'usbA',
       title: 'USB-A',
-      type: 'number', // using number for "x1"
+      type: 'number',
       group: 'connectivity',
     }),
     defineField({
       name: 'powerRequirements',
       title: 'Power Requirements',
       type: 'internationalizedArrayString',
+      group: 'power',
+    }),
+    defineField({
+      name: 'maxEnergyStarReportedLuminance',
+      title: 'Max. Energy Star Reported Luminance',
+      type: 'string',
       group: 'power',
     }),
     defineField({
@@ -573,13 +612,13 @@ export default defineType({
     }),
     defineField({
       name: 'vesaMountPointWidth',
-      title: 'VESA Mount Point Width(mm)',
+      title: 'Mount Point Width(mm)',
       type: 'string',
       group: 'physicalSpecifications',
     }),
     defineField({
       name: 'vesaMountPointHeight',
-      title: 'VESA Mount Point Height(mm)',
+      title: 'Mount Point Height(mm)',
       type: 'string',
       group: 'physicalSpecifications',
     }),
@@ -638,6 +677,12 @@ export default defineType({
       group: 'display',
     }),
     defineField({
+      name: 'fullArrayLocalDimming',
+      title: 'Full-Array Local Dimming',
+      type: 'boolean',
+      group: 'display',
+    }),
+    defineField({
       name: 'diagonalSize',
       title: 'Diagonal Size',
       type: 'internationalizedArrayString',
@@ -652,6 +697,12 @@ export default defineType({
     defineField({
       name: 'bondedGlass',
       title: 'Bonded Glass',
+      type: 'boolean',
+      group: 'display',
+    }),
+    defineField({
+      name: 'opticalBondedGlass',
+      title: 'Optical Bonded Glass',
       type: 'boolean',
       group: 'display',
     }),
@@ -713,6 +764,18 @@ export default defineType({
       name: 'contrastRatio',
       title: 'Contrast Ratio',
       type: 'internationalizedArrayString',
+      group: 'display',
+    }),
+    defineField({
+      name: 'staticContrastRatio',
+      title: 'Static Contrast Ratio (up to)',
+      type: 'string',
+      group: 'display',
+    }),
+    defineField({
+      name: 'dynamicContrastRatio',
+      title: 'Dynamic Contrast Ratio (up to)',
+      type: 'string',
       group: 'display',
     }),
     defineField({
@@ -893,6 +956,18 @@ export default defineType({
       group: 'interactivity',
     }),
     defineField({
+      name: 'integratedWirelessActivePenCharger',
+      title: 'Integrated Wireless Active Pen Charger',
+      type: 'boolean',
+      group: 'interactivity',
+    }),
+    defineField({
+      name: 'activePenFeatures',
+      title: 'Active Pen Features',
+      type: 'internationalizedArrayString',
+      group: 'interactivity',
+    }),
+    defineField({
       name: 'penType',
       title: 'Pen Type',
       type: 'internationalizedArrayString',
@@ -953,6 +1028,18 @@ export default defineType({
       group: 'audio',
     }),
     defineField({
+      name: 'integratedSoundbar',
+      title: 'Integrated Soundbar',
+      type: 'internationalizedArrayString',
+      group: 'audio',
+    }),
+    defineField({
+      name: 'integratedMicrophone',
+      title: 'Integrated Microphone',
+      type: 'internationalizedArrayString',
+      group: 'audio',
+    }),
+    defineField({
       name: 'opsSlot',
       title: 'OPS Slot',
       type: 'number',
@@ -962,6 +1049,12 @@ export default defineType({
       name: 'hdmiInRear',
       title: 'HDMI In (Rear 2.0)',
       type: 'number',
+      group: 'connectivity',
+    }),
+    defineField({
+      name: 'hdmiInRearString',
+      title: 'HDMI In (Rear)',
+      type: 'string',
       group: 'connectivity',
     }),
     defineField({
@@ -977,9 +1070,27 @@ export default defineType({
       group: 'connectivity',
     }),
     defineField({
+      name: 'displayPortString',
+      title: 'Display Port',
+      type: 'string',
+      group: 'connectivity',
+    }),
+    defineField({
       name: 'usbARear',
       title: 'USB-A (Rear)',
       type: 'number',
+      group: 'connectivity',
+    }),
+    defineField({
+      name: 'usbARearString',
+      title: 'USB-A (Rear)',
+      type: 'string',
+      group: 'connectivity',
+    }),
+    defineField({
+      name: 'usbARearStringTwo',
+      title: 'USB-A (Rear) - additional info',
+      type: 'string',
       group: 'connectivity',
     }),
     defineField({
@@ -1019,6 +1130,12 @@ export default defineType({
       group: 'connectivity',
     }),
     defineField({
+      name: 'usbCRear',
+      title: 'USB-C (Rear)',
+      type: 'internationalizedArrayString',
+      group: 'connectivity',
+    }),
+    defineField({
       name: 'usbBTouchFront',
       title: 'USB-B Touch (Front)',
       type: 'number',
@@ -1031,9 +1148,45 @@ export default defineType({
       group: 'connectivity',
     }),
     defineField({
+      name: 'usbBTouchRearString',
+      title: 'USB-B Touch (Rear)',
+      type: 'string',
+      group: 'connectivity',
+    }),
+    defineField({
       name: 'usbAFront',
       title: 'USB-A (Front)',
       type: 'number',
+      group: 'connectivity',
+    }),
+    defineField({
+      name: 'usbAFrontString',
+      title: 'USB-A (Front)',
+      type: 'string',
+      group: 'connectivity',
+    }),
+    defineField({
+      name: 'usbCFrontString',
+      title: 'USB-C (Front)',
+      type: 'string',
+      group: 'connectivity',
+    }),
+    defineField({
+      name: 'usbATopString',
+      title: 'USB-A (Top)',
+      type: 'string',
+      group: 'connectivity',
+    }),
+    defineField({
+      name: 'usbCTopString',
+      title: 'USB-C (Top)',
+      type: 'string',
+      group: 'connectivity',
+    }),
+    defineField({
+      name: 'usbCOutString',
+      title: 'USB-C Out',
+      type: 'string',
       group: 'connectivity',
     }),
     defineField({
@@ -1052,6 +1205,18 @@ export default defineType({
       name: 'lanOut',
       title: 'LAN Out (RJ45-GBps)',
       type: 'number',
+      group: 'connectivity',
+    }),
+    defineField({
+      name: 'lanInString',
+      title: 'LAN In (RJ45)',
+      type: 'string',
+      group: 'connectivity',
+    }),
+    defineField({
+      name: 'lanOutString',
+      title: 'LAN Out (RJ45)',
+      type: 'string',
       group: 'connectivity',
     }),
     defineField({
@@ -1114,13 +1279,7 @@ export default defineType({
       type: 'boolean',
       group: 'panelManagement',
     }),
-    defineField({
-      name: 'activInspireProfessionalSingleUser',
-      title: 'ActivInspire® Professional Single User',
-      //note: need to render this as e.g. Included
-      type: 'boolean',
-      group: 'educationSoftwareLicense',
-    }),
+
     defineField({
       name: 'wirelessProtocol',
       title: 'Wireless Protocol',
