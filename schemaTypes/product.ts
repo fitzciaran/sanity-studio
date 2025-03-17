@@ -334,6 +334,12 @@ export default defineType({
       group: 'generalSpecifications',
     }),
     defineField({
+      name: 'vPro',
+      title: 'vPro',
+      type: 'boolean',
+      group: 'generalSpecifications',
+    }),
+    defineField({
       name: 'platform',
       title: 'Platform',
       type: 'string',
@@ -412,6 +418,12 @@ export default defineType({
       group: 'connectivity',
     }),
     defineField({
+      name: 'usbTypeCString',
+      title: 'USB Type-C',
+      type: 'internationalizedArrayString',
+      group: 'connectivity',
+    }),
+    defineField({
       name: 'combinedAudio35Mm',
       title: 'Combined Audio 3.5 mm',
       type: 'number',
@@ -469,13 +481,19 @@ export default defineType({
     defineField({
       name: 'powerConsumption',
       title: 'Power Consumption',
-      type: 'string',
+      type: 'number',
+      group: 'power',
+    }),
+    defineField({
+      name: 'powerConsumptionString',
+      title: 'Power Consumption (for multiple products)',
+      type: 'internationalizedArrayString',
       group: 'power',
     }),
     defineField({
       name: 'powerConsumptionStandby',
       title: 'Power Consumption Standby',
-      type: 'string',
+      type: 'number',
       group: 'power',
     }),
     defineField({
