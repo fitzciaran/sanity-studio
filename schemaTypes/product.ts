@@ -153,7 +153,7 @@ export default defineType({
     }),
     defineField({
       name: 'prefooterText',
-      title: 'Small font line above main footer text',
+      title: 'Version Info',
       type: 'internationalizedArrayString',
       group: 'main',
     }),
