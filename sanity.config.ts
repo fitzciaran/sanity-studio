@@ -18,10 +18,12 @@ export default defineConfig({
     //googleMapsInput(),
     internationalizedArray({
       languages: [
+        {id: 'AR-XM', title: 'Spanish'},
         {id: 'en', title: 'English'},
-        {id: 'FR-FR', title: 'French'},
         {id: 'DE-DE', title: 'German'},
         {id: 'ES-ES', title: 'Spanish'},
+        {id: 'FR-FR', title: 'French'},
+        {id: 'ZH-HK', title: 'Spanish'},
       ],
       defaultLanguages: ['en'],
       fieldTypes: ['product', 'software', 'accessory', 'string'],
