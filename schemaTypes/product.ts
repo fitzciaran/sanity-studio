@@ -146,6 +146,13 @@ export default defineType({
       },
     }),
     defineField({
+      name: "titleImageSvg",
+      title: "Title Image (SVG for PDF)",
+      type: "file",
+      group: 'main',
+      options: { accept: "image/svg+xml" },
+    }),
+    defineField({
       name: 'finalText',
       title: 'Final normal size line before footer',
       type: 'internationalizedArrayString',
