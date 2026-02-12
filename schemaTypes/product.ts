@@ -443,6 +443,12 @@ export default defineType({
       group: 'connectivity',
     }),
     defineField({
+      name: 'audioLineInString',
+      title: 'Audio Line In',
+      type: 'string',
+      group: 'connectivity',
+    }),
+    defineField({
       name: 'spdif',
       title: 'S/PDIF',
       type: 'number',
