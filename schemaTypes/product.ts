@@ -1318,7 +1318,7 @@ export default defineType({
     }),
     defineField({
       name: 'mic',
-      title: 'Mic (3.5 mm)',
+      title: 'Mic In (3.5 mm)',
       type: 'number',
       group: 'connectivity',
     }),
