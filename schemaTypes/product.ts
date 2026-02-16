@@ -685,7 +685,7 @@ export default defineType({
     }),
     defineField({
       name: 'tuvBlueLightCertified',
-      title: 'TÜV Blue Light Certified',
+      title: 'TUV Blue Light Certified',
       group: 'complianceCertification',
       type: 'string',
     }),
