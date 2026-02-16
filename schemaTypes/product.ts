@@ -684,6 +684,18 @@ export default defineType({
       type: 'internationalizedArrayString',
     }),
     defineField({
+      name: 'tuvBlueLightCertified',
+      title: 'TÜV Blue Light Certified',
+      group: 'complianceCertification',
+      type: 'string',
+    }),
+    defineField({
+      name: 'EDLACertified',
+      title: 'EDLA Certified',
+      group: 'complianceCertification',
+      type: 'string',
+    }),
+    defineField({
       name: 'standardWarranty',
       title: 'Standard WARRANTY',
       type: 'internationalizedArrayString',
