@@ -146,11 +146,11 @@ export default defineType({
       },
     }),
     defineField({
-      name: "titleImageSvg",
-      title: "Title Image (SVG for PDF)",
-      type: "file",
+      name: 'titleImageSvg',
+      title: 'Title Image (SVG for PDF)',
+      type: 'file',
       group: 'main',
-      options: { accept: "image/svg+xml" },
+      options: {accept: 'image/svg+xml'},
     }),
     defineField({
       name: 'finalText',
@@ -341,6 +341,12 @@ export default defineType({
       group: 'generalSpecifications',
     }),
     defineField({
+      name: 'localMultiUserProfiles',
+      title: 'Local Multi-user Profiles',
+      type: 'boolean',
+      group: 'generalSpecifications',
+    }),
+    defineField({
       name: 'vPro',
       title: 'vPro',
       type: 'boolean',
@@ -457,7 +463,7 @@ export default defineType({
     }),
     defineField({
       name: 'spdif',
-      title: 'S/PDIF',
+      title: 'S/PDIF Out',
       type: 'number',
       group: 'connectivity',
     }),
@@ -1089,6 +1095,12 @@ export default defineType({
       group: 'connectivity',
     }),
     defineField({
+      name: 'hdmiInFrontString',
+      title: 'HDMI In (Front)',
+      type: 'string',
+      group: 'connectivity',
+    }),
+    defineField({
       name: 'hdmiInFront',
       title: 'HDMI In (Front 2.0)',
       type: 'number',
@@ -1103,6 +1115,12 @@ export default defineType({
     defineField({
       name: 'displayPortString',
       title: 'Display Port',
+      type: 'string',
+      group: 'connectivity',
+    }),
+    defineField({
+      name: 'displayPortRearString',
+      title: 'Display Port (Rear)',
       type: 'string',
       group: 'connectivity',
     }),
@@ -1173,6 +1191,12 @@ export default defineType({
       group: 'connectivity',
     }),
     defineField({
+      name: 'usbBTouchFrontString',
+      title: 'USB-B Touch (Front)',
+      type: 'string',
+      group: 'connectivity',
+    }),
+    defineField({
       name: 'usbBTouchRear',
       title: 'USB-B Touch (Rear)',
       type: 'number',
@@ -1217,6 +1241,12 @@ export default defineType({
     defineField({
       name: 'usbCOutString',
       title: 'USB-C Out',
+      type: 'string',
+      group: 'connectivity',
+    }),
+    defineField({
+      name: 'usbCOutRearString',
+      title: 'USB-C Out (Rear)',
       type: 'string',
       group: 'connectivity',
     }),
@@ -1272,6 +1302,12 @@ export default defineType({
       name: 'hdmiOut',
       title: 'HDMI Out (2.0)',
       type: 'number',
+      group: 'connectivity',
+    }),
+    defineField({
+      name: 'hdmiOutRearString',
+      title: 'HDMI Out (Rear)',
+      type: 'string',
       group: 'connectivity',
     }),
     defineField({
