@@ -532,6 +532,12 @@ export default defineType({
       group: 'power',
     }),
     defineField({
+      name: 'proximitySensor',
+      title: 'Proximity Sensor',
+      type: 'boolean',
+      group: 'power',
+    }),
+    defineField({
       name: 'operatingTemperatureMin',
       title: 'Operating Temperature Minimum (°C)',
       type: 'number',
