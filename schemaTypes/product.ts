@@ -592,6 +592,12 @@ export default defineType({
       group: 'sustainability',
     }),
     defineField({
+      name: 'dnshCertifications',
+      title: 'DNSH Certifications',
+      type: 'internationalizedArrayString',
+      group: 'sustainability',
+    }),
+    defineField({
       name: 'energyUsageAt400CdM2PerYearMin',
       title: 'Energy Usage at 400 cd/m² Per Year (kWh) Min',
       type: 'string',
