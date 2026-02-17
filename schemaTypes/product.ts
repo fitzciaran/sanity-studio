@@ -47,6 +47,10 @@ export default defineType({
       title: 'ENVIRONMENTAL',
     },
     {
+      name: 'sustainability',
+      title: 'SUSTAINABILITY',
+    },
+    {
       name: 'complianceCertification',
       title: 'COMPLIANCE & CERTIFICATION',
     },
@@ -580,6 +584,30 @@ export default defineType({
       title: 'Non-condensing humidity',
       type: 'boolean',
       group: 'environmental',
+    }),
+    defineField({
+      name: 'recyclablePackaging',
+      title: '% Recyclable Packaging',
+      type: 'internationalizedArrayString',
+      group: 'sustainability',
+    }),
+    defineField({
+      name: 'energyUsageAt400CdM2PerYearMin',
+      title: 'Energy Usage at 400 cd/m² Per Year (kWh) Min',
+      type: 'string',
+      group: 'sustainability',
+    }),
+    defineField({
+      name: 'energyUsageAt400CdM2PerYearMax',
+      title: 'Energy Usage at 400 cd/m² Per Year (kWh) Max',
+      type: 'string',
+      group: 'sustainability',
+    }),
+    defineField({
+      name: 'carbonFootprintKgCO2Yr',
+      title: 'Carbon Footprint (KgCO2/yr)',
+      type: 'string',
+      group: 'sustainability',
     }),
     defineField({
       name: 'productDimensionWidth',
