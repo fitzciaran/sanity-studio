@@ -1,5 +1,5 @@
-import {defineField, defineType} from 'sanity'
-import {MdDeveloperBoard as icon} from 'react-icons/md'
+import { defineField, defineType } from 'sanity';
+import { MdDeveloperBoard as icon } from 'react-icons/md';
 
 export default defineType({
   name: 'product',
@@ -154,7 +154,7 @@ export default defineType({
       title: 'Title Image (SVG for PDF)',
       type: 'file',
       group: 'main',
-      options: {accept: 'image/svg+xml'},
+      options: { accept: 'image/svg+xml' },
     }),
     defineField({
       name: 'finalText',
@@ -247,6 +247,12 @@ export default defineType({
       group: 'generalSpecifications',
     }),
     defineField({
+      name: 'processor',
+      title: 'Processor',
+      type: 'internationalizedArrayString',
+      group: 'generalSpecifications',
+    }),
+    defineField({
       name: 'operatingSystem',
       title: 'Operating System',
       type: 'internationalizedArrayString',
@@ -321,6 +327,12 @@ export default defineType({
       group: 'generalSpecifications',
     }),
     defineField({
+      name: 'storage',
+      title: 'Storage',
+      type: 'internationalizedArrayString',
+      group: 'generalSpecifications',
+    }),
+    defineField({
       name: 'touchscreenCompatibility',
       title: 'Touchscreen Compatibility',
       type: 'boolean',
@@ -363,27 +375,33 @@ export default defineType({
       group: 'generalSpecifications',
     }),
     defineField({
+      name: 'operatingSystemAvailability',
+      title: 'Operating System Availability',
+      type: 'internationalizedArrayString',
+      group: 'generalSpecifications',
+    }),
+    defineField({
       name: 'totalSpeakerPower',
       title: 'Total Speaker Power',
-      type: 'string', // Kept as string to handle "2 x 20 W RMS"
+      type: 'string', // Kept as string to handle '2 x 20 W RMS'
       group: 'generalSpecifications',
     }),
     defineField({
       name: 'speakerSizes',
       title: 'Speaker Sizes',
-      type: 'string', // Using string for "4 x 2.25”"
+      type: 'string', // Using string for '4 x 2.25”'
       group: 'generalSpecifications',
     }),
     defineField({
       name: 'frequencyResponse',
       title: 'Frequency Response',
-      type: 'string', // Using string for range "65 Hz - 20 KHz"
+      type: 'string', // Using string for range '65 Hz - 20 KHz'
       group: 'generalSpecifications',
     }),
     defineField({
       name: 'signalToNoiseRatio',
       title: 'Signal to Noise',
-      type: 'string', // Kept as string to include "≥ 75 dB"
+      type: 'string', // Kept as string to include '≥ 75 dB'
       group: 'generalSpecifications',
     }),
     defineField({
@@ -407,6 +425,30 @@ export default defineType({
     defineField({
       name: 'hdmiOutString',
       title: 'HDMI Out',
+      type: 'string',
+      group: 'connectivity',
+    }),
+    defineField({
+      name: 'hdmiInString',
+      title: 'HDMI In',
+      type: 'string',
+      group: 'connectivity',
+    }),
+    defineField({
+      name: 'usbCString',
+      title: 'USB-C',
+      type: 'string',
+      group: 'connectivity',
+    }),
+    defineField({
+      name: 'rs232InOut',
+      title: 'RS232In/Out',
+      type: 'string',
+      group: 'connectivity',
+    }),
+    defineField({
+      name: 'headphoneMicIn',
+      title: 'Headphone/Mic in (3.5 mm)',
       type: 'string',
       group: 'connectivity',
     }),
@@ -535,6 +577,24 @@ export default defineType({
       name: 'proximitySensor',
       title: 'Proximity Sensor',
       type: 'boolean',
+      group: 'power',
+    }),
+    defineField({
+      name: 'powerConsumptionMaximum',
+      title: 'Power Consumption Maximum',
+      type: 'number',
+      group: 'power',
+    }),
+    defineField({
+      name: 'voltage',
+      title: 'Voltage',
+      type: 'string',
+      group: 'power',
+    }),
+    defineField({
+      name: 'opsSlotPowerSupply',
+      title: 'OPS Slot Power Supply',
+      type: 'string',
       group: 'power',
     }),
     defineField({
@@ -880,6 +940,18 @@ export default defineType({
       group: 'display',
     }),
     defineField({
+      name: 'operationRating',
+      title: 'Operation Rating',
+      type: 'string',
+      group: 'display',
+    }),
+    defineField({
+      name: 'surfaceTreatment',
+      title: 'Surface Treatment',
+      type: 'internationalizedArrayString',
+      group: 'display',
+    }),
+    defineField({
       name: 'ambientLightSensor',
       title: 'Ambient Light Sensor',
       type: 'boolean',
@@ -919,11 +991,11 @@ export default defineType({
       name: 'touchTechnology',
       title: 'Touch Technology',
       type: 'array',
-      of: [{type: 'string'}],
+      of: [{ type: 'string' }],
       options: {
         list: [
-          {title: 'None', value: 'none'},
-          {title: 'Infrared', value: 'infrared'},
+          { title: 'None', value: 'none' },
+          { title: 'Infrared', value: 'infrared' },
         ],
         layout: 'tags',
       },
@@ -1126,6 +1198,12 @@ export default defineType({
       name: 'integratedMicrophone',
       title: 'Integrated Microphone',
       type: 'internationalizedArrayString',
+      group: 'audio',
+    }),
+    defineField({
+      name: 'dualRearFacingSpeakers',
+      title: 'Dual Rear-facing Speakers',
+      type: 'string',
       group: 'audio',
     }),
     defineField({
@@ -1641,13 +1719,13 @@ export default defineType({
       media: 'featuredImage',
     },
     prepare(selection) {
-      const year = selection.date && selection.date.split('-')[0]
+      const year = selection.date && selection.date.split('-')[0];
 
       return {
         title: `${selection.title} ${year ? `(${year})` : ''}`,
         date: selection.date,
         media: selection.media,
-      }
+      };
     },
   },
-})
+});
