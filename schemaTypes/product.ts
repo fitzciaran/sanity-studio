@@ -700,6 +700,42 @@ export default defineType({
       group: 'physicalSpecifications',
     }),
     defineField({
+      name: 'cameraDimensionWidth',
+      title: 'Camera Dimension Width (mm)',
+      type: 'string',
+      group: 'physicalSpecifications',
+    }),
+    defineField({
+      name: 'cameraDimensionHeight',
+      title: 'Camera Dimension Height (mm)',
+      type: 'string',
+      group: 'physicalSpecifications',
+    }),
+    defineField({
+      name: 'cameraDimensionDepth',
+      title: 'Camera Dimension Depth (mm)',
+      type: 'string',
+      group: 'physicalSpecifications',
+    }),
+    defineField({
+      name: 'cameraDimensionIncludingMountConnectorWidth',
+      title: 'Camera Dimension Including Mount & Connector Width (mm)',
+      type: 'string',
+      group: 'physicalSpecifications',
+    }),
+    defineField({
+      name: 'cameraDimensionIncludingMountConnectorHeight',
+      title: 'Camera Dimension Including Mount & Connector Height (mm)',
+      type: 'string',
+      group: 'physicalSpecifications',
+    }),
+    defineField({
+      name: 'cameraDimensionIncludingMountConnectorDepth',
+      title: 'Camera Dimension Including Mount & Connector Depth (mm)',
+      type: 'string',
+      group: 'physicalSpecifications',
+    }),
+    defineField({
       name: 'packedDimensionWidth',
       title: 'Packed Dimension Width (mm)',
       type: 'string',
