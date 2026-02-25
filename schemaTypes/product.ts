@@ -850,6 +850,18 @@ export default defineType({
       group: 'installation',
     }),
     defineField({
+      name: 'portraitInstallation',
+      title: 'Portrait Installation',
+      type: 'boolean',
+      group: 'installation',
+    }),
+    defineField({
+      name: 'landscapeInstallation',
+      title: 'Landscape Installation',
+      type: 'boolean',
+      group: 'installation',
+    }),
+    defineField({
       name: 'supportBlurb',
       title: 'Support Blurb',
       type: 'internationalizedArrayString',
