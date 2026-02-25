@@ -321,9 +321,21 @@ export default defineType({
       group: 'generalSpecifications',
     }),
     defineField({
+      name: 'ramString',
+      title: 'RAM (Display String)',
+      type: 'internationalizedArrayString',
+      group: 'generalSpecifications',
+    }),
+    defineField({
       name: 'internalStorage',
       title: 'Internal Storage (GB)',
       type: 'number',
+      group: 'generalSpecifications',
+    }),
+    defineField({
+      name: 'internalStorageString',
+      title: 'Internal Storage (Display String)',
+      type: 'internationalizedArrayString',
       group: 'generalSpecifications',
     }),
     defineField({
@@ -812,6 +824,12 @@ export default defineType({
       title: 'Regulatory Certification',
       group: 'complianceCertification',
       type: 'string',
+    }),
+    defineField({
+      name: 'certifiedApprovedAvSolutions',
+      title: 'Certified approved AV solutions',
+      group: 'complianceCertification',
+      type: 'internationalizedArrayString',
     }),
     defineField({
       name: 'energyStarCertified',
