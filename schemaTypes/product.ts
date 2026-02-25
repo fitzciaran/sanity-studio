@@ -387,6 +387,30 @@ export default defineType({
       group: 'generalSpecifications',
     }),
     defineField({
+      name: 'architecture',
+      title: 'Architecture',
+      type: 'internationalizedArrayString',
+      group: 'generalSpecifications',
+    }),
+    defineField({
+      name: 'displayResolution',
+      title: 'Display Resolution',
+      type: 'internationalizedArrayString',
+      group: 'generalSpecifications',
+    }),
+    defineField({
+      name: 'prometheanEssentialApps',
+      title: 'Promethean Essential Apps',
+      type: 'internationalizedArrayString',
+      group: 'generalSpecifications',
+    }),
+    defineField({
+      name: 'googleApps',
+      title: 'Google Apps',
+      type: 'internationalizedArrayString',
+      group: 'generalSpecifications',
+    }),
+    defineField({
       name: 'operatingSystemAvailability',
       title: 'Operating System Availability',
       type: 'internationalizedArrayString',
