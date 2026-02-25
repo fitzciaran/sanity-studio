@@ -1213,6 +1213,12 @@ export default defineType({
       group: 'interactivity',
     }),
     defineField({
+      name: 'preInstalledApps',
+      title: 'Pre-installed apps',
+      type: 'internationalizedArrayString',
+      group: 'generalSpecifications',
+    }),
+    defineField({
       name: 'compatibility',
       title: 'Compatibility',
       type: 'internationalizedArrayString',
