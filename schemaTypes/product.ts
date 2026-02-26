@@ -847,7 +847,7 @@ export default defineType({
       name: 'regulatoryCertification',
       title: 'Regulatory Certification',
       group: 'complianceCertification',
-      type: 'string',
+      type: 'internationalizedArrayString',
     }),
     defineField({
       name: 'certifiedApprovedAvSolutions',
