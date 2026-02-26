@@ -141,6 +141,15 @@ export default defineType({
       },
     }),
     defineField({
+      name: 'featuredImage2',
+      title: 'Featured Image (Page 2)',
+      type: 'image',
+      group: 'main',
+      options: {
+        hotspot: true,
+      },
+    }),
+    defineField({
       name: 'titleImage',
       title: 'Title Image',
       type: 'image',
