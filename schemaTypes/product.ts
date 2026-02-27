@@ -1811,8 +1811,38 @@ export default defineType({
       group: 'accessories',
     }),
     defineField({
+      name: 'prometheanOpsAAndroid',
+      title: 'Promethean OPS-A (Android)',
+      type: 'internationalizedArrayString',
+      group: 'accessories',
+    }),
+    defineField({
+      name: 'prometheanChromebox',
+      title: 'Promethean Chromebox',
+      type: 'internationalizedArrayString',
+      group: 'accessories',
+    }),
+    defineField({
+      name: 'prometheanOpsMWindows',
+      title: 'Promethean OPS-M (Windows)',
+      type: 'internationalizedArrayString',
+      group: 'accessories',
+    }),
+    defineField({
       name: 'activSoundBar',
       title: 'ActivSoundBar',
+      type: 'internationalizedArrayString',
+      group: 'accessories',
+    }),
+    defineField({
+      name: 'prometheanWallMount',
+      title: 'Promethean Wall mount',
+      type: 'internationalizedArrayString',
+      group: 'accessories',
+    }),
+    defineField({
+      name: 'versatileMountingSolutions',
+      title: 'Versatile mounting solutions',
       type: 'internationalizedArrayString',
       group: 'accessories',
     }),
