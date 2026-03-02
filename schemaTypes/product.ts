@@ -871,6 +871,13 @@ export default defineType({
       type: 'boolean',
     }),
     defineField({
+      name: 'energyStarCertifiedString',
+      title: 'Energy Star Certified (by size)',
+      group: 'complianceCertification',
+      type: 'string',
+      description: 'Slash-delimited values by size, e.g. true/true/false for 65/75/86.',
+    }),
+    defineField({
       name: 'tradeAgreementsActTaaCompliance',
       title: 'Trade Agreements Act (TAA) Compliance',
       group: 'complianceCertification',
