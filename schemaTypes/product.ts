@@ -1522,6 +1522,12 @@ export default defineType({
       group: 'connectivity',
     }),
     defineField({
+      name: 'vga',
+      title: 'VGA',
+      type: 'number',
+      group: 'connectivity',
+    }),
+    defineField({
       name: 'wakeOnLan',
       title: 'Wake-on-LAN',
       type: 'boolean',
