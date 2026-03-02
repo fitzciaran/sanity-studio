@@ -75,10 +75,6 @@ export default defineType({
       title: 'SUPPORT',
     },
     {
-      name: 'educationSoftwareLicense',
-      title: 'EDUCATION SOFTWARE LICENSE',
-    },
-    {
       name: 'technicalDrawings',
       title: 'TECHNICAL DRAWINGS',
     },
