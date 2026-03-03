@@ -1399,6 +1399,12 @@ export default defineType({
       group: 'connectivity',
     }),
     defineField({
+      name: 'usbA30',
+      title: 'USB-A 3.0',
+      type: 'number',
+      group: 'connectivity',
+    }),
+    defineField({
       name: 'usbA32Front',
       title: 'USB-A 3.2 Gen 1 (Front)',
       type: 'number',
